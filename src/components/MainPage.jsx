@@ -19,7 +19,7 @@ const MainPage = () => {
       vFlex
       vFlexCol
       vJustifyContent="between"
-      className="row-start-2 row-end-3 h-full"
+      className="row-start-2 row-end-3 h-full justify-center md:gap-8 md:p-5"
     >
       <Utility
         vFlex
@@ -28,7 +28,7 @@ const MainPage = () => {
         vAlignItems="center"
         vJustifyContent="center"
         vGap={8}
-        className="text-center"
+        className="mb-[15vh] text-center md:mb-0 md:grow-0"
       >
         <Typography variant="headline-1" tag="h1">
           Hi, Hannah 👋
@@ -38,7 +38,10 @@ const MainPage = () => {
         </Typography>
       </Utility>
 
-      <UtilityFragment vElevation="xsmall" className="rounded-full">
+      <UtilityFragment
+        vElevation="xsmall"
+        className="mx-auto w-full rounded-full md:mb-[15vh] md:max-w-md"
+      >
         <form action="">
           <Label htmlFor={id} className="sr-only">
             Component keywords (required)
