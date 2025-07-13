@@ -12,7 +12,7 @@ const MainPage = () => {
   };
 
   return (
-    <div className="row-start-2 row-end-3 h-full">
+    <div className="row-start-2 row-end-3 size-full min-w-0">
       {showResults ? (
         <Results query={query} />
       ) : (

@@ -8,4 +8,5 @@
 
 @theme {
   --color-primary: var(--palette-default-active);
+  --color-code-block-accent: #0f2b42;
 }

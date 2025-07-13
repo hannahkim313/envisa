@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className="grid min-h-screen grid-rows-[auto_1fr]">
       <Header />
-      <main>
+      <main className="w-full min-w-0">
         <MainPage />
       </main>
     </div>
