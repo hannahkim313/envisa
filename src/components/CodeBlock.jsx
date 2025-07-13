@@ -11,7 +11,10 @@ const CodeBlock = ({ code }) => (
     <div className="w-full overflow-x-auto">
       <Highlight code={code.trim()} language="jsx" theme={themes.nightOwl}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={clsx(className, 'min-w-fit p-4')} style={style}>
+          <pre
+            className={clsx(className, 'min-w-fit p-4 text-sm')}
+            style={style}
+          >
             {tokens.map((line, i) => (
               <div key={i} {...getLineProps({ line })}>
                 <span className="inline-block w-8 pr-4 text-right">
