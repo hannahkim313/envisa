@@ -21,7 +21,7 @@ const NewSearch = ({ handleSearch }) => {
     // Get a random data set to display in the results UI
     const index = getRandomIndex(data.length);
     const results = data[index];
-    handleSearch(results.prompt);
+    handleSearch(results);
   };
 
   return (
