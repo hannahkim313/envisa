@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react';
 import { Button, Tooltip, Utility } from '@visa/nova-react';
+import { GenericCopyLow } from '@visa/nova-icons-react';
 
-const CopyToClipboard = ({ textToCopy = '' }) => {
+const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
   const buttonRef = useRef(null);
   const [tooltipText, setTooltipText] = useState('Copy to clipboard');
   const [showTooltip, setShowTooltip] = useState(false);
@@ -33,6 +34,7 @@ const CopyToClipboard = ({ textToCopy = '' }) => {
         onFocus={handleTooltipShow}
         onBlur={handleTooltipReset}
       >
+        {hasIcon && <GenericCopyLow />}
         {textToCopy}
       </Button>
 
