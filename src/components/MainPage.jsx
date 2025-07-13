@@ -27,6 +27,7 @@ const MainPage = () => {
         vFlexCol
         vAlignItems="center"
         vJustifyContent="center"
+        vGap={8}
         className="text-center"
       >
         <Typography variant="headline-1" tag="h1">
