@@ -24,7 +24,7 @@ const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
   };
 
   return (
-    <Utility vFlex vJustifyContent="center" className="relative">
+    <Utility className="relative">
       <Button
         buttonSize="small"
         ref={buttonRef}
