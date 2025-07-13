@@ -30,7 +30,7 @@ const NewSearch = ({ handleSearch = () => {} }) => {
       vFlex
       vFlexCol
       vJustifyContent="between"
-      className="h-full justify-center md:gap-12 md:p-5 lg:p-6"
+      className="mx-auto h-full max-w-3xl justify-center md:gap-12 md:p-8"
     >
       <Utility
         vFlex
@@ -51,7 +51,7 @@ const NewSearch = ({ handleSearch = () => {} }) => {
 
       <UtilityFragment
         vElevation="xsmall"
-        className="mx-auto w-full rounded-2xl md:mb-[30vh] md:max-w-3xl"
+        className="w-full rounded-2xl md:mb-[30vh]"
       >
         <form onSubmit={onSubmit}>
           <Label htmlFor={id} className="sr-only">

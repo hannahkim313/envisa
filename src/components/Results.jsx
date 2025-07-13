@@ -13,14 +13,17 @@ const Results = ({ query = {} }) => {
       vPadding={16}
       vFlex
       vFlexCol
-      vJustifyContent="between"
       vGap={16}
-      className="h-full justify-center md:gap-12 md:p-5 lg:p-6"
+      className="mx-auto h-full max-w-3xl md:gap-12 md:p-8"
     >
       <Utility vFlex vFlexCol vGap={8}>
-        <Utility vFlex vFlexCol vGap={8}>
+        <Utility vFlex vFlexCol vGap={8} className="mx-auto max-w-lg">
           <Quote variant="left" />
-          <Typography variant="headline-2" tag="h1" className="md:text-5xl">
+          <Typography
+            variant="headline-2"
+            tag="h1"
+            className="text-center text-pretty md:text-3xl"
+          >
             {prompt}
           </Typography>
           <Quote variant="right" />
@@ -51,17 +54,23 @@ const Results = ({ query = {} }) => {
               key={index}
               vFlex
               vFlexCol
-              vGap={8}
+              vGap={16}
               vJustifyContent="between"
-              className="xs:flex-row rounded-md bg-white p-4 shadow-sm"
+              className="xs:flex-row items-center rounded-md bg-white p-4 shadow-sm"
             >
-              <CopyToClipboard textToCopy={name} hasIcon={false} />
-              <Typography className="hidden">{description}</Typography>
+              <div className="md:flex-1/4">
+                <CopyToClipboard textToCopy={name} hasIcon={false} />
+              </div>
+
+              <Typography className="hidden max-w-sm md:block md:flex-auto">
+                {description}
+              </Typography>
+
               <Link
                 href={api}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-md p-2 text-sm"
+                className="flex items-center gap-2 rounded-md p-2 text-sm whitespace-nowrap md:flex-auto"
               >
                 View docs <GenericChevronRightTiny />
               </Link>
