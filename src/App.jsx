@@ -1,4 +1,4 @@
-// import MainPage from './components/MainPage';
+import MainPage from './components/MainPage';
 import Header from './components/Header';
 
 const App = () => {
@@ -6,8 +6,7 @@ const App = () => {
     <div className="grid min-h-screen grid-rows-[auto_1fr]">
       <Header />
       <main>
-        {/* TODO: create the main page */}
-        {/* <MainPage /> */}
+        <MainPage />
       </main>
     </div>
   );
