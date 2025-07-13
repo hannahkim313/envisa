@@ -24,7 +24,7 @@ const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
   };
 
   return (
-    <Utility className="relative">
+    <Utility className="relative w-fit">
       <Button
         buttonSize="small"
         ref={buttonRef}
