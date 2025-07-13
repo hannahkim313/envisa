@@ -1,12 +1,20 @@
 const data = [
   {
-    prompt: 'An accordion that displays a single panel',
-    keywords: ['accordion', 'panel'],
+    prompt: 'An accordion with a labeled badge that displays a single panel',
+    keywords: ['accordion', 'badge', 'panel'],
     components: [
-      'Accordion',
-      'AccordionHeading',
-      'AccordionPanel',
-      'AccordionToggleIcon',
+      {
+        name: '<Accordion />',
+        description:
+          'Sets of vertical headers that reveal or hide subsections of content.',
+        api: 'https://design.visa.com/components/accordion/?code_library=react&version=2.5.4#api',
+      },
+      {
+        name: '<Badge />',
+        description:
+          'Visual indicators that communicate the status of a component.',
+        api: 'https://design.visa.com/components/badge/?code_library=react&version=2.5.4#api',
+      },
     ],
     code: `
       import { Accordion, AccordionHeading, AccordionPanel, AccordionToggleIcon, Typography } from '@visa/nova-react';
@@ -29,7 +37,20 @@ const data = [
   {
     prompt: 'A simple footer with a few important links',
     keywords: ['footer', 'links'],
-    components: ['Footer', 'Link'],
+    components: [
+      {
+        name: '<Footer />',
+        description:
+          'Content fixed at the bottom of a page to provide important information or links.',
+        api: 'https://design.visa.com/components/footer/?code_library=react&version=2.5.4#api',
+      },
+      {
+        name: '<Link />',
+        description:
+          'Text-based navigation elements that take users to another destination.',
+        api: 'https://design.visa.com/components/link/?code_library=react&version=2.5.4#api',
+      },
+    ],
     code: `
       import { Footer, Link, Utility, VisaLogo } from '@visa/nova-react';
 
@@ -62,11 +83,12 @@ const data = [
     prompt: 'A notification that displays a success message',
     keywords: ['notification', 'success', 'message'],
     components: [
-      'Flag',
-      'FlagCloseButton',
-      'FlagContent',
-      'FlagIcon',
-      'ScreenReader',
+      {
+        name: '<Flag />',
+        description:
+          'Messages that provide low-priority updates about a process or event.',
+        api: 'https://design.visa.com/components/flag/?code_library=react&version=2.5.4#api',
+      },
     ],
     code: `
       import { Flag, FlagCloseButton, FlagContent, FlagIcon, Typography, ScreenReader } from '@visa/nova-react';
