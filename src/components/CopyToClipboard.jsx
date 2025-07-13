@@ -24,7 +24,7 @@ const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
   };
 
   return (
-    <Utility className="relative w-fit">
+    <Utility className="relative w-fit whitespace-nowrap">
       <Button
         buttonSize="small"
         ref={buttonRef}
