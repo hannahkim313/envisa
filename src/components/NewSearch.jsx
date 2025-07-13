@@ -9,9 +9,19 @@ import {
   Utility,
   UtilityFragment,
 } from '@visa/nova-react';
+import data from '../data/data';
+import getRandomIndex from '../utils/getRandomIndex';
 
-const NewSearch = () => {
+const NewSearch = ({ handleSearch }) => {
   const id = 'component-keywords';
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const index = getRandomIndex(data.length);
+    const results = data[index];
+    handleSearch(results.prompt);
+  };
 
   return (
     <Utility
@@ -19,7 +29,7 @@ const NewSearch = () => {
       vFlex
       vFlexCol
       vJustifyContent="between"
-      className="row-start-2 row-end-3 h-full justify-center md:gap-12 md:p-5 lg:p-6"
+      className="h-full justify-center md:gap-12 md:p-5 lg:p-6"
     >
       <Utility
         vFlex
@@ -42,7 +52,7 @@ const NewSearch = () => {
         vElevation="xsmall"
         className="mx-auto w-full rounded-2xl md:mb-[30vh] md:max-w-3xl"
       >
-        <form action="">
+        <form onSubmit={onSubmit}>
           <Label htmlFor={id} className="sr-only">
             Component keywords (required)
           </Label>
@@ -54,6 +64,7 @@ const NewSearch = () => {
               type="text"
               aria-required="true"
               aria-describedby={`${id}-message`}
+              placeholder="e.g., navigational footer"
             />
             <Button
               type="submit"
