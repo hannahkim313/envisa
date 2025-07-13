@@ -12,7 +12,7 @@ import {
 import data from '../data/data';
 import getRandomIndex from '../utils/getRandomIndex';
 
-const NewSearch = ({ handleSearch }) => {
+const NewSearch = ({ handleSearch = () => {} }) => {
   const id = 'component-keywords';
 
   const onSubmit = (e) => {
