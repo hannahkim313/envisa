@@ -1,1 +1,11 @@
 @import 'tailwindcss';
+
+@layer overrides {
+  :root {
+    /* TODO: customize theme */
+  }
+}
+
+@theme {
+  --color-primary: var(--palette-default-active);
+}
