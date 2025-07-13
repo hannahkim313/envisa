@@ -30,6 +30,8 @@ const CopyToClipboard = ({ textToCopy = '' }) => {
         onClick={handleCopy}
         onMouseEnter={handleTooltipShow}
         onMouseLeave={handleTooltipReset}
+        onFocus={handleTooltipShow}
+        onBlur={handleTooltipReset}
       >
         {textToCopy}
       </Button>
