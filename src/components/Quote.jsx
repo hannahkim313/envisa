@@ -15,7 +15,7 @@ const Quote = ({ variant = 'left' }) => {
       className={clsx(
         'fill-primary stroke-primary lucide lucide-quote-icon lucide-quote',
         variant === 'left' && 'rotate-180',
-        variant === 'right' && 'scale-x-[-1] rotate-180'
+        variant === 'right' && 'scale-x-[-1] rotate-180 self-end'
       )}
       aria-hidden="true"
       focusable="false"
