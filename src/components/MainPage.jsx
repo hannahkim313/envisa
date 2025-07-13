@@ -19,7 +19,7 @@ const MainPage = () => {
       vFlex
       vFlexCol
       vJustifyContent="between"
-      className="row-start-2 row-end-3 h-full justify-center md:gap-8 md:p-5 lg:p-6"
+      className="row-start-2 row-end-3 h-full justify-center md:gap-12 md:p-5 lg:p-6"
     >
       <Utility
         vFlex
@@ -28,7 +28,7 @@ const MainPage = () => {
         vAlignItems="center"
         vJustifyContent="center"
         vGap={8}
-        className="mb-[30vh] text-center md:mb-0 md:grow-0 md:gap-4"
+        className="mb-[30vh] text-center md:mb-0 md:grow-0 md:gap-6"
       >
         <Typography variant="headline-1" tag="h1" className="md:text-5xl">
           Hi, Hannah 👋
