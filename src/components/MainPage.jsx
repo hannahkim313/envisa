@@ -19,7 +19,7 @@ const MainPage = () => {
       vFlex
       vFlexCol
       vJustifyContent="between"
-      className="row-start-2 row-end-3 h-full justify-center md:gap-8 md:p-5"
+      className="row-start-2 row-end-3 h-full justify-center md:gap-8 md:p-5 lg:p-6"
     >
       <Utility
         vFlex
@@ -28,26 +28,26 @@ const MainPage = () => {
         vAlignItems="center"
         vJustifyContent="center"
         vGap={8}
-        className="mb-[15vh] text-center md:mb-0 md:grow-0"
+        className="mb-[30vh] text-center md:mb-0 md:grow-0 md:gap-4"
       >
-        <Typography variant="headline-1" tag="h1">
+        <Typography variant="headline-1" tag="h1" className="md:text-5xl">
           Hi, Hannah 👋
         </Typography>
-        <Typography variant="body-2-bold">
+        <Typography variant="body-2-bold" className="md:text-xl">
           What are we building today?
         </Typography>
       </Utility>
 
       <UtilityFragment
         vElevation="xsmall"
-        className="mx-auto w-full rounded-full md:mb-[15vh] md:max-w-md"
+        className="mx-auto w-full rounded-2xl md:mb-[30vh] md:max-w-3xl"
       >
         <form action="">
           <Label htmlFor={id} className="sr-only">
             Component keywords (required)
           </Label>
 
-          <InputContainer className="rounded-full">
+          <InputContainer className="h-12 rounded-2xl p-4">
             <Input
               id={id}
               name="component-keywords"
