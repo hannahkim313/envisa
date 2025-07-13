@@ -18,6 +18,7 @@ const NewSearch = ({ handleSearch }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+    // Get a random data set to display in the results UI
     const index = getRandomIndex(data.length);
     const results = data[index];
     handleSearch(results.prompt);
