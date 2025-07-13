@@ -1,6 +1,6 @@
 const data = [
-  // Prompt: "An accordion that displays a single panel"
   {
+    prompt: 'An accordion that displays a single panel',
     keywords: ['accordion', 'panel'],
     components: [
       'Accordion',
@@ -26,8 +26,8 @@ const data = [
       };
     `,
   },
-  // Prompt: "A simple footer with a few important links"
   {
+    prompt: 'A simple footer with a few important links',
     keywords: ['footer', 'links'],
     components: ['Footer', 'Link'],
     code: `
@@ -58,8 +58,8 @@ const data = [
       };
     `,
   },
-  // Prompt: "A notification that displays a success message"
   {
+    prompt: 'A notification that displays a success message',
     keywords: ['notification', 'success', 'message'],
     components: [
       'Flag',
@@ -87,3 +87,5 @@ const data = [
     `,
   },
 ];
+
+export default data;
