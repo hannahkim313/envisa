@@ -14,8 +14,6 @@ import clsx from 'clsx';
 const TextInput = ({ handleSearch = () => {}, isSearchPage = false }) => {
   const id = 'component-keywords';
 
-  console.log(isSearchPage);
-
   const onSubmit = (e) => {
     e.preventDefault();
 
