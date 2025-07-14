@@ -35,7 +35,7 @@ const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
         onBlur={handleTooltipReset}
       >
         {hasIcon && <GenericCopyLow />}
-        {textToCopy}
+        {hasIcon ? 'Copy' : textToCopy}
       </Button>
 
       {showTooltip && (

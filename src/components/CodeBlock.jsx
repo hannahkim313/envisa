@@ -5,7 +5,7 @@ import clsx from 'clsx';
 const CodeBlock = ({ code }) => (
   <div className="bg-code-block-accent relative rounded-md shadow-md">
     <div className="flex justify-end pt-2 pr-4 pb-2 pl-2">
-      <CopyToClipboard textToCopy="Copy" hasIcon={true} />
+      <CopyToClipboard textToCopy={code} hasIcon={true} />
     </div>
 
     <div className="overflow-hidden rounded-b-md">
