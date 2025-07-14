@@ -6,6 +6,7 @@
     --palette-default-active-hover: #5e2de6;
     --palette-default-active-pressed: #4d319b;
     --palette-default-surface-highlight: #a8acff48;
+    --palette-default-surface-lowlight: #a8acff77;
   }
 }
 
@@ -14,4 +15,13 @@
   --color-code-block-accent: #0f2b42;
 
   --breakpoint-xs: 25rem;
+}
+
+@layer base {
+  /* Override tailwind's pre-flight styles */
+  dialog {
+    margin: auto;
+    padding: 0;
+    border: none;
+  }
 }
