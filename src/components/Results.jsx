@@ -9,13 +9,7 @@ const Results = ({ query = {} }) => {
   const { prompt, components, keywords, code } = query;
 
   return (
-    <Utility
-      vPadding={16}
-      vFlex
-      vFlexCol
-      vGap={16}
-      className="mx-auto h-full max-w-3xl md:gap-12 md:p-8"
-    >
+    <Utility vFlex vFlexCol vGap={16} className="md:gap-12">
       <Utility vFlex vFlexCol vGap={8}>
         <Utility vFlex vFlexCol vGap={8} className="mx-auto max-w-lg">
           <Quote variant="left" />
