@@ -10,25 +10,32 @@ import { GenericSendLow } from '@visa/nova-icons-react';
 import data from '../data/data';
 import getRandomIndex from '../utils/getRandomIndex';
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 
 const TextInput = ({ handleSearch = () => {}, isSearchPage = false }) => {
+  const [inputValue, setInputValue] = useState('');
+
   const id = 'component-keywords';
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // Get a random data set to display in the results UI
     const index = getRandomIndex(data.length);
     const results = data[index];
     handleSearch(results);
+
+    setInputValue('');
   };
+
+  const handleInputValue = (e) => setInputValue(e.target.value);
 
   return (
     <UtilityFragment
       vElevation="xsmall"
       className={clsx('w-full rounded-2xl', isSearchPage && 'md:mb-[30vh]')}
     >
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <Label htmlFor={id} className="sr-only">
           Component keywords (required)
         </Label>
@@ -41,6 +48,8 @@ const TextInput = ({ handleSearch = () => {}, isSearchPage = false }) => {
             aria-required="true"
             aria-describedby={`${id}-message`}
             placeholder="e.g., navigational footer"
+            value={inputValue}
+            onChange={handleInputValue}
           />
           <Button
             type="submit"
