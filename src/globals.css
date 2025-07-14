@@ -2,7 +2,10 @@
 
 @layer overrides {
   :root {
-    /* TODO: customize theme */
+    --palette-default-active: #613dc1;
+    --palette-default-active-hover: #5e2de6;
+    --palette-default-active-pressed: #4d319b;
+    --palette-default-surface-highlight: #a8acff48;
   }
 }
 
