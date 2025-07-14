@@ -13,7 +13,7 @@ const CodeBlock = ({ code }) => (
         <Highlight code={code.trim()} language="jsx" theme={themes.nightOwl}>
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre
-              className={clsx(className, 'min-w-fit p-4 text-sm')}
+              className={clsx(className, 'min-w-fit p-4 text-sm md:text-base')}
               style={style}
             >
               {tokens.map((line, i) => (

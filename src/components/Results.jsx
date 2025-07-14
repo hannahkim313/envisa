@@ -34,9 +34,7 @@ const Results = ({ query = {} }) => {
           <ul className="inline-flex flex-wrap gap-2">
             {keywords.map((keyword, index) => (
               <li key={index}>
-                <Button buttonSize="small" colorScheme="tertiary">
-                  #{keyword}
-                </Button>
+                <Button colorScheme="tertiary">#{keyword}</Button>
               </li>
             ))}
           </ul>
@@ -56,7 +54,7 @@ const Results = ({ query = {} }) => {
               vFlexCol
               vGap={16}
               vJustifyContent="between"
-              className="xs:flex-row items-center rounded-md bg-white p-4 shadow-sm"
+              className="xs:flex-row xs:items-center rounded-md bg-white p-4 shadow-sm"
             >
               <div className="md:flex-1/4">
                 <CopyToClipboard textToCopy={name} hasIcon={false} />
@@ -70,7 +68,7 @@ const Results = ({ query = {} }) => {
                 href={api}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-md p-2 text-sm whitespace-nowrap md:flex-auto"
+                className="flex items-center gap-2 rounded-md p-2 text-sm whitespace-nowrap md:flex-auto md:text-base"
               >
                 View docs <GenericChevronRightTiny />
               </Link>
