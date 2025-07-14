@@ -3,6 +3,10 @@ import { Button, Tooltip, Utility } from '@visa/nova-react';
 import { GenericCopyLow } from '@visa/nova-icons-react';
 
 const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
+  const isTouchDevice =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(pointer: coarse)').matches;
+
   const buttonRef = useRef(null);
   const [tooltipText, setTooltipText] = useState('Copy to clipboard');
   const [showTooltip, setShowTooltip] = useState(false);
@@ -13,6 +17,13 @@ const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
     try {
       await navigator.clipboard.writeText(textToCopy);
       setTooltipText('Copied!');
+      handleTooltipShow();
+
+      if (isTouchDevice) {
+        setTimeout(() => {
+          handleTooltipReset();
+        }, 2000);
+      }
     } catch (err) {
       setTooltipText('Failed to copy');
     }
@@ -29,8 +40,8 @@ const CopyToClipboard = ({ textToCopy = '', hasIcon = false }) => {
         buttonSize="small"
         ref={buttonRef}
         onClick={handleCopy}
-        onMouseEnter={handleTooltipShow}
-        onMouseLeave={handleTooltipReset}
+        onMouseEnter={!isTouchDevice ? handleTooltipShow : undefined}
+        onMouseLeave={!isTouchDevice ? handleTooltipReset : undefined}
         onFocus={handleTooltipShow}
         onBlur={handleTooltipReset}
       >
